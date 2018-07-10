@@ -31,11 +31,13 @@ def calculate_levenshtein_distance(string_1, string_2)
   return  array[m][n]
 end
 
+puts "--Terminal arguments--"
 puts "String_1: #{ARGV[0]}"
 puts "String_2: #{ARGV[1]}"
 puts "Cost: #{ calculate_levenshtein_distance(ARGV[0], ARGV[1]) }"
 
 data = read_file('words_levenshtein_distance')
+puts "--File arguments--"
 puts "String_1: #{data[0]}"
 puts "String_2: #{data[1]}"
 puts "Cost: #{ calculate_levenshtein_distance(data[0], data[1]) }"
